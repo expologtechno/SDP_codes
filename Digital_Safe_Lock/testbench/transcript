@@ -1,0 +1,50 @@
+# vsim -c -coverage -vopt work.tb_Password 
+# Start time: 14:17:59 on Nov 04,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb_Password(fast)
+# Loading work.Password(fast)
+# at                    0,rst=1,in=00000,led=0,seg=xxxx,seg_led=xxxxxxxx
+# at                   10,rst=0,in=10101,led=1,seg=xxxx,seg_led=xxxxxxxx
+# at                   15,rst=0,in=10101,led=1,seg=0111,seg_led=00000011
+# at                   20,rst=0,in=00101,led=0,seg=0111,seg_led=00000011
+# at                   25,rst=0,in=00101,led=0,seg=0111,seg_led=11000001
+# at                   30,rst=0,in=01111,led=0,seg=0111,seg_led=11000001
+# at                   40,rst=0,in=10101,led=1,seg=0111,seg_led=11000001
+# at                   45,rst=0,in=10101,led=1,seg=0111,seg_led=00000011
+# at                   50,rst=0,in=00100,led=0,seg=0111,seg_led=00000011
+# at                   55,rst=0,in=00100,led=0,seg=0111,seg_led=11000001
+# at                   60,rst=0,in=10101,led=1,seg=0111,seg_led=11000001
+# at                   65,rst=0,in=10101,led=1,seg=0111,seg_led=00000011
+# at                   70,rst=0,in=11110,led=0,seg=0111,seg_led=00000011
+# at                   75,rst=0,in=11110,led=0,seg=0111,seg_led=11000001
+# at                   80,rst=0,in=10101,led=1,seg=0111,seg_led=11000001
+# at                   85,rst=0,in=10101,led=1,seg=0111,seg_led=00000011
+# at                   90,rst=0,in=01000,led=0,seg=0111,seg_led=00000011
+# at                   95,rst=0,in=01000,led=0,seg=0111,seg_led=11000001
+# at                  100,rst=0,in=00111,led=0,seg=0111,seg_led=11000001
+# at                  110,rst=0,in=00010,led=0,seg=0111,seg_led=11000001
+# at                  120,rst=0,in=00001,led=0,seg=0111,seg_led=11000001
+# at                  130,rst=0,in=10101,led=1,seg=0111,seg_led=11000001
+# at                  135,rst=0,in=10101,led=1,seg=0111,seg_led=00000011
+# at                  140,rst=0,in=10100,led=0,seg=0111,seg_led=00000011
+# at                  145,rst=0,in=10100,led=0,seg=0111,seg_led=11000001
+# at                  150,rst=0,in=10101,led=1,seg=0111,seg_led=11000001
+# at                  155,rst=0,in=10101,led=1,seg=0111,seg_led=00000011
+# ** Note: $finish    : tb.v(73)
+#    Time: 1160 ns  Iteration: 0  Instance: /tb_Password
+# End time: 14:18:06 on Nov 04,2023, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0
