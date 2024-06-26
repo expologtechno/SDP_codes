@@ -84,7 +84,7 @@ module clk_div( input clk_in,reset,
         
   //clk division
   always @(posedge clk_in) begin
-    if(reset) div = 0;
+    if(reset) begin div = 0; clk = 0; end
     if(div == DIV_VAL) div = 0;
     else div = div+1;
   end
