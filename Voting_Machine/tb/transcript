@@ -1,0 +1,70 @@
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# OpenFile testbench.sv
+vsim -voptargs=+acc work.tb_voting_machine
+# vsim -voptargs="+acc" work.tb_voting_machine 
+# Start time: 12:18:43 on Jun 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_voting_machine(fast)
+# Loading work.voting_machine(fast)
+add wave sim:/tb_voting_machine/uut/*
+run -all
+# time =                    0, rst = 1, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                   20, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                   30, rst = 0, candidate_1 = 1, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                   40, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                   60, rst = 0, candidate_1 = 0, candidate_2 = 1, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                   70, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                   90, rst = 0, candidate_1 = 1, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  100, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  120, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 1, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  130, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  150, rst = 0, candidate_1 = 0, candidate_2 = 1, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  160, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  180, rst = 0, candidate_1 = 0, candidate_2 = 1, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  190, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  210, rst = 0, candidate_1 = 1, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  220, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  240, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 1, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  250, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 0, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# time =                  280, rst = 0, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 1, result_1 =   3, result_2 =   3, result_3 =   2,
+#  
+# time =                  330, rst = 1, candidate_1 = 0, candidate_2 = 0, candidate_3 = 0, vote_over = 1, result_1 =   0, result_2 =   0, result_3 =   0,
+#  
+# ** Note: $finish    : testbench.sv(87)
+#    Time: 630 ns  Iteration: 0  Instance: /tb_voting_machine
+# 1
+# Break in Module tb_voting_machine at testbench.sv line 87
+# End time: 12:19:42 on Jun 09,2024, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 0
