@@ -1,0 +1,27 @@
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# OpenFile testbench.v
+vsim -voptargs=+acc work.Testbench
+# vsim -voptargs="+acc" work.Testbench 
+# Start time: 07:16:38 on Jun 08,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.Testbench(fast)
+# Loading work.Aclock(fast)
+add wave sim:/Testbench/uut/*
+run -all
+# Break key hit
+# Break in Module Testbench at testbench.v line 56
+# End time: 07:45:47 on Jun 08,2024, Elapsed time: 0:29:09
+# Errors: 0, Warnings: 0
