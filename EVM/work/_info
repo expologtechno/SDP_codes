@@ -1,0 +1,71 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/cygwin64/home/K G/Desktop/UVM_PROJECTS/SDP_codes/EVM
+T_opt
+!s110 1719475090
+Vbf=IFhzdC_WQ<ib@ZB^Yh3
+04 6 4 work tb_top fast 0
+=1-782b46754883-667d1b91-39b-16b4
+o-quiet -auto_acc_if_foreign -work work -debugdb
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+vevm
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 !s110 1719475078
+!i10b 1
+!s100 0d>CX>nin;4Jbh_khYk=o2
+IHGhOUBBVc<FS1MRK=K0Sg2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 !s105 design_tb_sv_unit
+S1
+R0
+w1719490491
+8design.sv
+Fdesign.sv
+L0 1
+Z6 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z7 !s108 1719475078.000000
+Z8 !s107 design.sv|design_tb.sv|
+Z9 !s90 -coveropt|3|+cover|-L|/uvm-1.2|+define+DUMP_ON|design_tb.sv|
+!i113 0
+Z10 !s102 -coveropt 3 +cover
+Z11 o-coveropt 3 +cover -L /uvm-1.2 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 -coveropt 3 +cover -L /uvm-1.2 +define+DUMP_ON -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_top
+R2
+R3
+!i10b 1
+!s100 m^gb9SehicaCiS;@zO8A31
+I`4zC;NXfY:?0FcdEM12oh1
+R4
+R5
+S1
+R0
+w1719491275
+8design_tb.sv
+Fdesign_tb.sv
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+R1

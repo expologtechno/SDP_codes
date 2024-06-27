@@ -1,0 +1,63 @@
+# vsim -c -debugDB -do "do wave.do; run -all; exit" work.tb_top 
+# Start time: 08:58:09 on Jun 27,2024
+# ** Warning: (vsim-4308) Enabling visibility using +acc is recommended with debug flow.
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-4308) Enabling visibility using +acc is recommended with debug flow.
+# ** Warning: (vopt-10016) Option '-L /uvm-1.2' was detected by vlog for design-unit 'tb_top', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /uvm-1.2' was detected by vlog for design-unit 'evm', but was not detected by vopt. The vlog option will be ignored.
+# //  Questa Sim-64
+# //  Version 10.6c win64 Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_top(fast)
+# Loading work.evm(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# do wave.do
+# ** Error: (vish-4014) No objects found matching '/tb_top/dut/u_clk_div/*'.
+# Error in macro ./wave.do line 4
+# (vish-4014) No objects found matching '/tb_top/dut/u_clk_div/*'.
+#     while executing
+# "add wave -noupdate /tb_top/dut/u_clk_div/*"
+#  run -all
+# bjp=0,jdu=0,rjd=0,bsp=0,inc=0,sp=0,inp=0,ncp=0,nota=0
+# Winner is bjp
+# bjp=1,jdu=0,rjd=0,bsp=0,inc=0,sp=0,inp=0,ncp=0,nota=0
+# Winner is inc
+# bjp=1,jdu=0,rjd=0,bsp=0,inc=1,sp=0,inp=0,ncp=0,nota=0
+# Winner is bjp
+# bjp=2,jdu=0,rjd=0,bsp=0,inc=1,sp=0,inp=0,ncp=0,nota=0
+# Winner is inc
+# bjp=2,jdu=0,rjd=0,bsp=0,inc=2,sp=0,inp=0,ncp=0,nota=0
+# Winner is bjp
+# bjp=3,jdu=0,rjd=0,bsp=0,inc=2,sp=0,inp=0,ncp=0,nota=0
+# Winner is bjp
+# bjp=4,jdu=0,rjd=0,bsp=0,inc=2,sp=0,inp=0,ncp=0,nota=0
+# Winner is bjp
+# bjp=4,jdu=0,rjd=0,bsp=0,inc=2,sp=0,inp=1,ncp=0,nota=0
+# Winner is bjp
+# bjp=5,jdu=0,rjd=0,bsp=0,inc=2,sp=0,inp=1,ncp=0,nota=0
+# Winner is bjp
+# bjp=5,jdu=0,rjd=0,bsp=0,inc=2,sp=1,inp=1,ncp=0,nota=0
+# Winner is bjp
+# bjp=6,jdu=0,rjd=0,bsp=0,inc=2,sp=1,inp=1,ncp=0,nota=0
+# Winner is bjp
+# bjp=6,jdu=0,rjd=0,bsp=0,inc=2,sp=1,inp=1,ncp=0,nota=1
+# ** Note: $stop    : design_tb.sv(43)
+#    Time: 110 ns  Iteration: 0  Instance: /tb_top
+# Break in Module tb_top at design_tb.sv line 43
+# Stopped at design_tb.sv line 43
+#  exit
+# End time: 08:58:25 on Jun 27,2024, Elapsed time: 0:00:16
+# Errors: 3, Warnings: 4
