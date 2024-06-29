@@ -82,7 +82,6 @@ module evm (
 
     // Debounce signals
     reg [1:0] db_bjp, db_jdu, db_rjd, db_inc;
-    
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             db_bjp <= 2'b00;

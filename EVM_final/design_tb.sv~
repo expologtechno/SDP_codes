@@ -150,13 +150,13 @@ module tb_top;
         passkey = 4'b1010;
         result_enable = 1;
         #10;
-        $display("With correct passkey: BJP=%d, JDU=%d, RJD=%d, INC=%d, LED_BJP=%b, LED_JDU=%b, LED_RJD=%b, LED_INC=%b",
+     //   $display("With correct passkey: BJP=%d, JDU=%d, RJD=%d, INC=%d, LED_BJP=%b, LED_JDU=%b, LED_RJD=%b, LED_INC=%b",
                  bjp, jdu, rjd, inc, led_bjp, led_jdu, led_rjd, led_inc);
 
         // Disable result enable and check
         result_enable = 0;
         #10;
-      //  $display("With correct passkey but result enable off: BJP=%d, JDU=%d, RJD=%d, INC=%d, LED_BJP=%b, LED_JDU=%b, LED_RJD=%b, LED_INC=%b",
+        $display("With correct passkey but result enable off: BJP=%d, JDU=%d, RJD=%d, INC=%d, LED_BJP=%b, LED_JDU=%b, LED_RJD=%b, LED_INC=%b",
                  bjp, jdu, rjd, inc, led_bjp, led_jdu, led_rjd, led_inc);
 
         // End simulation
