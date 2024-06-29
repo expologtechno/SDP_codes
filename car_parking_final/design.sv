@@ -16,8 +16,8 @@ wire clk;
   );
   assign clk_out = clk;
     // Total number of parking spots
-    parameter TOTAL_SPOTS = 8'd8;
-    reg [7:0] occupied_spots;
+    parameter TOTAL_SPOTS = 8'd15;
+    reg [3:0] occupied_spots;
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
@@ -33,13 +33,15 @@ wire clk;
         end
     end
 
+    assign spots = TOTAL_SPOTS-occupied_spots;
+
     // Update the output signals based on the number of occupied spots
-    always @(*) begin
-        spots[0] = (occupied_spots >= 1);
-        spots[1] = (occupied_spots >= 2);
-        spots[2] = (occupied_spots >= 3);
-        spots[3] = (occupied_spots >= 4);
-    end
+    //always @(*) begin
+    //    spots[0] = (occupied_spots >= 1);
+    //    spots[1] = (occupied_spots >= 2);
+    //    spots[2] = (occupied_spots >= 3);
+    //    spots[3] = (occupied_spots >= 4);
+    //end
 endmodule
 
 
