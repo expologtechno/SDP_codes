@@ -4,35 +4,42 @@ DESIGN: DIGITAL SAFE LOCKER
 
 ***************************************************************************/
 module Password (
-    input [4:0] in,
     input clk,
     input rst,
-    output led,
-    output reg [3:0] seg,
-    output reg [7:0] seg_led
+    input [4:0] key,
+    input unlock_button,
+    output led_green,
+    output led_red,
+    output led_lock
 );
-    reg [15:0] count;
-    reg [11:0] seg_mem [7:0];
-    assign led = (in == 5'b10101) ? 1'b1 : 1'b0;
-    
-    initial begin
-        seg_mem [0] = 12'h7_C1;
-        seg_mem [1] = 12'hB_11;
-        seg_mem [2] = 12'hD_D5;
-        seg_mem [3] = 12'hE_84;
-        seg_mem [4] = 12'h7_03;
-        seg_mem [5] = 12'hB_31;
-        seg_mem [6] = 12'hD_61;
-        seg_mem [7] = 12'hE_D4;
-    end
 
-    always @(posedge clk) begin
-        if(rst) begin
-            count <= 0;
-        end else begin
-            count <= count + 1;
-            {seg, seg_led} = seg_mem[{led, count[15:14]}];
-        end
+   reg [15:0] count;
+   reg [15:0] lock_count;
+    
+   always @(posedge unlock_button) begin
+	    if(key == 5'b10101 & led_lock == 0) begin
+		    led_green 	<= 1'b1;
+		    led_red 	<= 1'b0;
+		    led_lock 	<= 1'b0;
+		    count 	<= 1'b0;
+	    end
+	    else begin
+		    if(count < 3)   count = count + 1;
+		    led_red = 1'b1
+	    	    if(lock_count == 0 & led_lock == 0) count = 0; 
+	    end
     end
+    always @(posedge clk) begin
+	    if(count >= 3 && led_lock == 0) begin
+		    led_lock = 1; 
+		    lock_count = 10;
+	    end
+	    if(lock_count == 0) led_lock <= 1'b0;
+	    if(led_lock)
+		    lock_count = lock_count - 1;
+	    if(led_red & unlock_button) 
+		    led_red <= 0;
+    end
+	    
 endmodule : Password
 
