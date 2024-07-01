@@ -61,6 +61,5 @@ module clk_div( input clk_in,reset,
   
   always@(*) begin
     if(div==DIV_VAL) clk = ~clk;
-    //if(div==0)	clk = 0;
   end
 endmodule
