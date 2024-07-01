@@ -4,94 +4,88 @@ NAME: EXPOLOG TECHNOLOGIES
 FILE: TESBENCH FILE
 
 ***************************************************************************/
-`include "../design/rtl.v"
+`include "rtl.v"
 
-module tb_Password;
-    reg [4:0] in;
+module tb_top;
+
+    // Inputs
     reg clk;
-    reg rst;    
-    wire led;
-    wire [3:0] seg;
-    wire [7:0] seg_led;
-    integer i;
+    reg rst;
+  reg [3:0] key;
+    reg unlock_button;
 
-    Password dut (.in(in), .clk(clk), .rst(rst), .led(led), .seg(seg), .seg_led(seg_led));
+    // Outputs
+    wire led_green;
+    wire led_red;
+  //  wire led_lock;
 
-// Clock Generation
+    // Instantiate the Unit Under Test (UUT)
+    Password dut (
+        .clk(clk), 
+        .rst(rst), 
+        .key(key), 
+        .unlock_button(unlock_button), 
+        .led_green(led_green), 
+        .led_red(led_red) 
+    );
 
-     initial clk=0;
-     always #5 clk = ~clk;
-
-// Reset Generation
     initial begin
-        rst=1;
-     #10 rst=0;
-     end
+        // Initialize Inputs
+        clk = 0;
+        rst = 0;
+        key = 0;
+        unlock_button = 0;
 
-// Sequence-1
-
-   initial begin
-    
-        in = 0;
+        #100;
+        
+        // Apply reset
+        rst = 1;
         #10;
-        in = 21;
-    	#10;
-        in = 5;
-	#10;
-	in = 15;
-	#10;
-        in = 21;
-	#10;
-	in = 4;
-	#10;
-	in = 21;
-	#10;
-	in = 30;
-	#10;
+        rst = 0;
 
-        in = 21;
-	#10;
-	in = 8;
-	#10;
-	in = 7;
-	#10;
-	in = 2;
-	#10;
-	in = 1;
-	#10;
-	in = 21;
-	#10;
-	in = 20;
-	#10;
-	in = 21;
-	#10;
+     
+        key = 4'b0101;
+        unlock_button = 1;
+        #10;
+        unlock_button = 0;
+        #100;
 
+   
+        key = 4'b0000;
+        unlock_button = 1;
+        #10;
+        unlock_button = 0;
+        #100;
+        unlock_button = 1;
+        #10;
+        unlock_button = 0;
+        #100;
+        unlock_button = 1;
+        #10;
+        unlock_button = 0;
+        #100;
 
-
-
+         
+        key = 4'b0101;
+        unlock_button = 1;
+        #10;
+        unlock_button = 0;
+        #100;
        
-	#1000 $finish;
+        key = 4'b0001;
+        unlock_button = 1;
+        #10;
+        unlock_button = 0;
+        #100;
+
     end
 
-// Sequence-2
-       /*  initial begin
-          clk=0; 
-
-         for(i=0; i<=32; i=i+1)
-	 begin
-		 in<=i;
-	         #10; 
-         end
-		 #1000 $finish;
-	 end*/
-
-                  
-     initial begin
-	$monitor("at %t,rst=%b,in=%b,led=%b,seg=%b,seg_led=%b",$time,rst,in,led,seg,seg_led);
-     end
- 
-
-
-    endmodule
-
+    always #5 clk = ~clk; 
+  
+          initial begin
+        $dumpfile("dump.vcd");
+            $dumpvars(1);
+# 1500 $finish;
+        end
+endmodule
 
