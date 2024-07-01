@@ -22,7 +22,7 @@ module tb_top;
     wire led_inc;
 
     // Instantiate the EVM module
-    evm uut (
+    evm dut (
         .clk(clk),
         .rst(rst),
         .button_bjp(button_bjp),
@@ -31,10 +31,10 @@ module tb_top;
         .button_inc(button_inc),
         .passkey(passkey),
         .result_enable(result_enable),
-        .bjp(bjp),
-        .jdu(jdu),
-        .rjd(rjd),
-        .inc(inc),
+        //.bjp(bjp),
+        //.jdu(jdu),
+        //.rjd(rjd),
+        //.inc(inc),
         .led_bjp(led_bjp),
         .led_jdu(led_jdu),
         .led_rjd(led_rjd),
@@ -78,10 +78,12 @@ module tb_top;
         result_enable = 1;
         #10;
         //$display("Without correct passkey: BJP=%d, JDU=%d, RJD=%d, INC=%d, LED_BJP=%b, LED_JDU=%b, LED_RJD=%b, LED_INC=%b",
-                 bjp, jdu, rjd, inc, led_bjp, led_jdu, led_rjd, led_inc);
+                 //bjp, jdu, rjd, inc, led_bjp, led_jdu, led_rjd, led_inc);
 
         // Check votes with correct passkey
+        result_enable = 0;
         passkey = 4'b1010;
+	#10;
         result_enable = 1;
         #10;
         $display("With correct passkey: BJP=%d, JDU=%d, RJD=%d, INC=%d, LED_BJP=%b, LED_JDU=%b, LED_RJD=%b, LED_INC=%b",
@@ -91,7 +93,7 @@ module tb_top;
         result_enable = 0;
         #10;
       //  $display("With correct passkey but result enable off: BJP=%d, JDU=%d, RJD=%d, INC=%d, LED_BJP=%b, LED_JDU=%b, LED_RJD=%b, LED_INC=%b",
-                 bjp, jdu, rjd, inc, led_bjp, led_jdu, led_rjd, led_inc);
+                 //bjp, jdu, rjd, inc, led_bjp, led_jdu, led_rjd, led_inc);
 
         // End simulation
         $stop;
