@@ -21,7 +21,7 @@ wire clk;
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            occupied_spots <= 8'd0;
+            occupied_spots <= 8'h0;
         end
         else begin
             if (car_enter && occupied_spots < TOTAL_SPOTS) begin
@@ -33,7 +33,9 @@ wire clk;
         end
     end
 
-    assign spots = TOTAL_SPOTS-occupied_spots;
+    always @(occupied_spots) begin
+	    spots = 4'hF - occupied_spots;
+    end
 
     // Update the output signals based on the number of occupied spots
     //always @(*) begin
@@ -54,12 +56,13 @@ module clk_div( input clk_in,reset,
         
   //clk division
   always @(posedge clk_in) begin
-    if(reset) begin div = 0; clk = 0; end
+    if(reset) div = 0; 
     if(div == DIV_VAL) div = 0;
     else div = div+1;
   end
   
   always@(*) begin
+    if(reset) clk = 0;
     if(div==DIV_VAL) clk = ~clk;
   end
 endmodule
